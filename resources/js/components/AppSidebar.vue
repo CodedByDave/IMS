@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import NavFooter from '@/components/NavFooter.vue';
 import NavMain from '@/components/NavMain.vue';
 import NavUser from '@/components/NavUser.vue';
 import {
@@ -14,7 +13,7 @@ import {
 import { dashboard } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/vue3';
-import { BookOpen, Folder, LayoutGrid, Sprout, UserPlus, UserRoundPlus} from 'lucide-vue-next';
+import { LayoutGrid, UserPlus, UserRoundPlus, Package, Box, Tags, Ruler, Badge, ArrowLeftRight, Sliders, Barcode } from 'lucide-vue-next';
 import AppLogo from './AppLogo.vue';
 
 const mainNavItems: NavItem[] = [
@@ -42,11 +41,52 @@ const mainNavItems: NavItem[] = [
                 title: 'Suppliers',
                 href: '/suppliers',
                 icon: UserRoundPlus,
+            },
+        ],
+    },
+    {
+        title: 'Product Management',
+        href: '#',
+        icon: Package,
+        children: [
+            {
+                title: 'Products',
+                href: '/products',
+                icon: Box
+            },
+            {
+                title: 'Categories',
+                href: '/categories',
+                icon: Tags
+            },
+            {
+                title: 'Units',
+                href: '/units',
+                icon: Ruler
+            },
+            {
+                title: 'Brands',
+                href: '/brands',
+                icon: Badge
+            },
+            {
+                title: 'Stock Movements',
+                href: '/stock-movements',
+                icon: ArrowLeftRight
+            },
+            {
+                title: 'Adjustments',
+                href: '/adjustments',
+                icon: Sliders
+            },
+            {
+                title: 'Barcodes',
+                href: '/barcodes',
+                icon: Barcode
             }
         ],
     },
 ];
-
 </script>
 
 <template>

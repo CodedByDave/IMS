@@ -3,9 +3,8 @@ import AppLayout from '@/layouts/AppLayout.vue';
 import { dashboard } from '@/routes';
 import { type BreadcrumbItem } from '@/types';
 import { Head, usePage } from '@inertiajs/vue3';
-import PlaceholderPattern from '../components/PlaceholderPattern.vue';
+import PlaceholderPattern from '@/components/PlaceholderPattern.vue';
 
-// Icons
 import {
     AlertTriangle,
     ArrowDownCircle,
@@ -20,7 +19,6 @@ import {
     User,
 } from 'lucide-vue-next';
 
-// Get logged-in user
 const page = usePage();
 const user = page.props.auth.user;
 
@@ -204,9 +202,6 @@ const breadcrumbs: BreadcrumbItem[] = [
                 </div>
             </div>
 
-            <!-- ==============================
-                 UPCOMING EXPIRATIONS
-            =============================== -->
             <div
                 class="min-h-[200px] rounded-xl border bg-white p-4 dark:bg-neutral-900"
             >
